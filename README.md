@@ -1,18 +1,13 @@
-# Tinder Access Token Generator
+# Heetch Access Token Generator
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/jaebradley/tinder-access-token-generator.svg)](https://greenkeeper.io/)
-[![Build Status](https://travis-ci.org/jaebradley/tinder-access-token-generator.svg?branch=master)](https://travis-ci.org/jaebradley/tinder-access-token-generator)
-[![npm](https://img.shields.io/npm/dt/tinder-access-token-generator.svg)](https://www.npmjs.com/package/tinder-access-token-generator)
-[![npm](https://img.shields.io/npm/v/tinder-access-token-generator.svg)](https://www.npmjs.com/package/tinder-access-token-generator)
-
-An `npm` package for use in `Node` that generates access tokens for the Tinder API using Facebook credentials.
+An `npm` package for use in `Node` that generates access tokens for the Heetch API using Facebook credentials.
 
 This library does the following
 
 1. Uses [`puppeteer`](https://github.com/GoogleChrome/puppeteer) to effectively go through the login flow via headless browser
-2. Goes through Tinder confirmation flow - intercepts authentication response and parses access token
+2. Goes through Heetch confirmation flow - intercepts authentication response and parses access token
 3. Uses access token from Facebook to identify associated Facebook ID
-4. Using both access token from Facebook and Facebook ID, makes request to Tinder's authentication endpoint to return API access token
+4. Using both access token from Facebook and Facebook ID, makes request to Heetch's authentication endpoint to return API access token
 
 ## API
 
@@ -20,10 +15,10 @@ This library does the following
 
 Generate an access token given a Facebook email address and Facebook password.
 
-This access token can be used to make Tinder API requests.
+This access token can be used to make Heetch API requests.
 
 ```javascript
-import generateToken from 'tinder-access-token-generator';
+import generateToken from 'heetch-access-token-generator';
 
 const accessToken = await generateToken({
   facebookEmailAddress: 'myfacebookemail@address.com',
